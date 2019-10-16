@@ -532,10 +532,13 @@ section.faqSec section.row div.row1 h2 {
 }
 
 section.faqSec section.row div.row2 ul.faqUl {
-    margin: 0 0 120px 0;
+    margin: 0 0 60px 0;
 }
 
 section.faqSec section.row div.row2 ul.faqUl li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 0 15px 0;
 }
 
@@ -557,11 +560,14 @@ section.faqSec section.row div.row2 ul.faqUl li div.quesCont div.imgHolder {
     justify-content: center;
     height: 27.5px;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 section.faqSec section.row div.row2 ul.faqUl li p.answer {
     height: 0;
     overflow: hidden;
+    transition: height 0.4s ease;
+    width: 30%;
 }
 
 section.faqSec div.faqSecImg {
@@ -781,7 +787,9 @@ footer h3 {
 
     /********** FAQ SECTION **********/
 
-    /* No Changes*/
+    section.faqSec section.row div.row2 ul.faqUl li p.answer {
+        width: 50%;
+    }
 
 
     /********** EMAIL SECTION **********/
@@ -960,7 +968,9 @@ footer h3 {
 
     /********** FAQ SECTION **********/
 
-    /* No Changes */
+    section.faqSec section.row div.row2 ul.faqUl li p.answer {
+        width: 80%;
+    }
 
 
     /********** EMAIL SECTION **********/
@@ -1062,14 +1072,16 @@ footer h3 {
     /********** Mobile Menu Overlay **********/
 
     section.menuOverlay {
-        width: 100vw;
+        width: 0;
         height: 100vh;
         background: #ab2973;
         position: absolute;
         top: 0;
         left: 0;
-        display: none;
+        display: block;
         z-index: 1;
+        transition: width 0.8s ease;
+        overflow: hidden;
     }
 
     section.menuOverlay div.closeBtn {
@@ -1486,7 +1498,7 @@ footer h3 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 80%;
+        width: 90%;
         text-align: center;
     }
 
@@ -1497,7 +1509,7 @@ footer h3 {
     }
 
     section.faqSec section.row div.row2 ul.faqUl {
-        margin: 0 0 120px 0;
+        margin: 0 0 60px 0;
     }
 
     section.faqSec section.row div.row2 ul.faqUl li {
@@ -1526,6 +1538,8 @@ footer h3 {
     section.faqSec section.row div.row2 ul.faqUl li p.answer {
         height: 0;
         overflow: hidden;
+        transition: height 0.4s ease;
+        width: 100%;
     }
 
     section.faqSec div.faqSecImg {
