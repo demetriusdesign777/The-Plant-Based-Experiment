@@ -20,6 +20,7 @@ closeBtn.addEventListener("click", function(e) {
     }
 })
 
+
 // FAQ Reveal Slider Script
 
 revealSlider();
@@ -28,8 +29,6 @@ function revealSlider() {
     var arrows = document.querySelectorAll(".faqLi .imgHolder");
     var answers = document.querySelectorAll(".answer");
     var faq = document.querySelector(".faqUl");
-
-    //faq.style.height = 200 + "px";
 
     // Add the click event to arrows
     arrows.forEach(function(arrow) {
