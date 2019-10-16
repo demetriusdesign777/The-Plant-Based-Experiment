@@ -55,36 +55,6 @@ function revealSlider() {
                 e.currentTarget.style.transform = "rotate(90deg)";
                 answer.style.height = 135 + "px";
             }
-
-
-            
-
-            // Answer div's height to be 50px
-            /*ansDiv.style.height = 50 + "px";*/
-
-            // Form's height to be 50px more
-            //faq.style.height = (parseInt(faq.style.height) + 50) + "px";
-            /*faq.style.height = 250 + "px";*/
-            
         })
     })
-    /*
-    // Add the click event to minus signs
-    minusSigns.forEach(function(minusSign) {
-        minusSign.addEventListener("click", function(e) {
-            var addSign = minusSign.previousElementSibling;
-            var ansDiv = minusSign.parentElement.parentElement.nextElementSibling;
-
-            // Minus sign to turn to an add sign
-            minusSign.style.display = "none";
-            addSign.style.display = "block";
-
-            // Answer div height to be 0px
-            ansDiv.style.height = 0 + "px";
-
-            // Form div height to be 200px
-            faq.style.height = 200 + "px";
-        })
-    })
-    */
 }
