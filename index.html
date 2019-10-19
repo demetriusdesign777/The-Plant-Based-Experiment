@@ -46,19 +46,19 @@
             <section class="menuOverlayContent row row2">
                 <ul class="navMenuOverlay">
                     <li class="navMenuOverlayItem">
-                        <a>Ask Yourself</a>
+                        <a href="#ask">Ask Yourself</a>
                     </li>
                     <li class="navMenuOverlayItem">
-                        <a>What is it</a>
+                        <a href="#what">What is it</a>
                     </li>
                     <li class="navMenuOverlayItem">
-                        <a>What Will You Learn</a>
+                        <a href="#learn">What Will You Learn</a>
                     </li>
                     <li class="navMenuOverlayItem">
-                        <a>FAQ</a>
+                        <a href="#faq">FAQ</a>
                     </li>
                     <li class="navMenuOverlayItem">
-                        <a>Get Started</a>
+                        <a href="#start">Get Started</a>
                     </li>
                 </ul>
             </section>
@@ -104,7 +104,7 @@
                 <img src="asset/field-of-plants-background-hidef.svg" alt="A field of cabbage">
             </div>
         </section>
-        <section class="askSec sec">
+        <section id="ask" class="askSec sec">
             <section class="askSecContent secContent row row5">
                 <h3 class="askSecTitle secTitle">
                     Ask Yourself
@@ -169,7 +169,7 @@
                 <img src="asset/woman-walking-background-hidef.jpg" alt="A woman walking in a field">
             </div>
         </section>
-        <section class="plantSec sec">
+        <section id="what" class="plantSec sec">
             <section class="plantSecContent secContent row row7">
                 <div class="plantSecContent plantSecContent1">
                     <h3 class="plantSecContentTitle">What Is The Plant-Based Experiment</h3>
@@ -201,7 +201,7 @@
                 <img src="asset/half-of-papaya-hidef & desktop.svg" alt="A papaya">
             </div>
         </section>
-        <section class="learnSec sec">
+        <section id="learn" class="learnSec sec">
             <section class="learnSecContent secContent row row8">
                 <div class="row row1 learnContent">
                     <h3 class="learnContentH3">What You Will Learn</h3>
@@ -230,7 +230,7 @@
                 <img src="asset/man-jumping-on-mountain-background-hidef.svg" alt="A woman walking in a field">
             </div>
         </section>
-        <section class="faqSec sec">
+        <section id="faq" class="faqSec sec">
             <section class="faqSecContent secContent row row9">
                 <div class="row row1">
                     <h2 class="titleH2">Frequently Asked Questions</h2>
@@ -312,7 +312,7 @@
                 <img src="asset/logo-2-all-screens.svg" alt="A leaf">
             </div>
         </section>
-        <section class="emailSec sec">
+        <section id="start" class="emailSec sec">
             <section class="emailSecContent secContent row row10">
                 <div class="row row1">
                     <div class="col col1">
@@ -322,10 +322,13 @@
                             after finishing the course we'll give you your money back.
                         </p>
                     </div>
-                    <div class="col col2">
-                        <input type="text" placeholder="John" class="emailBtn emailBtn1">
-                        <input type="text" placeholder="John123@gmail.com" class="emailBtn emailBtn2">
+                    <form class="col col2">
+                        <input type="text" placeholder="John" class="nameInput emailInput1">
+                        <input type="text" placeholder="John123@gmail.com" class="emailInput emailInput2">
                         <button class="emailBtn emailBtn3">Get Started</button>
+                    </form>
+                    <div class="messageDiv">
+                        <p class="messageP">Email Sent!</p>
                     </div>
                 </div>
             </section>
@@ -337,6 +340,30 @@
         <footer>
             <h3>&copy 2019 The Plant-Based Experiment</h3>
         </footer>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-functions.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "",
+            authDomain: "",
+            databaseURL: "",
+            projectId: "",
+            storageBucket: "",
+            messagingSenderId: "",
+            appId: ""
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const functions = firebase.functions()
+        </script>
+
         <script src="js/app.js"></script>
     </body>
 </html>

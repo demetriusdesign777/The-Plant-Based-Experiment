@@ -1,30 +1,62 @@
-// Mobile Menu Script
+// Declare Variables
 
+// Mobile Menu Variables
 var menu = document.querySelector(".mobileMenuIcon");
 var closeBtn = document.querySelector(".closeBtn");
 
-menu.addEventListener("click", function(e) {
-    if(e.currentTarget.parentElement.parentElement.className == "mobileMenu sec") {
-        // App Menu
-        e.currentTarget.parentElement.parentElement.previousElementSibling.style.width = "100vw";
-    } else {
-        console.log("Something's Wrong!")
-        console.log(e.currentTarget.parentElement.className)
-    }
-})
+// NodeMailer Variables
+var email = document.querySelector('.emailInput');
+var username = document.querySelector('.nameInput');
+var form = document.querySelector('form');
+var messageDiv = document.querySelector('.messageDiv');
+var messageP = document.querySelector('.messageP');
 
-closeBtn.addEventListener("click", function(e) {
-    if(e.currentTarget.parentElement.className == "menuOverlay") {
-        // App Menu Close Btn
-        e.currentTarget.parentElement.style.width = "0px";
-    }
-})
+// Scroll Animation Variables
+var navLinks = document.querySelectorAll('.navMenuOverlayItem a');
+var html = document.querySelector('html');
 
+mobileMenu();
+scrollAnimation();
+revealSlider();
+emailMessenger();
+
+// Mobile Menu
+function mobileMenu() {
+    menu.addEventListener("click", function(e) {
+        if(e.currentTarget.parentElement.parentElement.className == "mobileMenu sec") {
+            // App Menu
+            e.currentTarget.parentElement.parentElement.previousElementSibling.style.width = "100vw";
+        } 
+    })
+
+    closeBtn.addEventListener("click", function(e) {
+        if(e.currentTarget.parentElement.className == "menuOverlay") {
+            // App Menu Close Btn
+            e.currentTarget.parentElement.style.width = "0px";
+        }
+    })
+}
+
+// Scroll Animation
+function scrollAnimation() {
+    navLinks.forEach(function(a) {
+        a.addEventListener("click", function(e) {
+            var promise1 = new Promise(function(resolve, reject) {
+                html.style.scrollBehavior = "smooth";
+                setTimeout(function() {
+                    resolve();
+                }, 1000)
+            })
+            
+            promise1.then(function() {
+                // Menu Overlay
+                menu.parentElement.parentElement.previousElementSibling.style.width = "0";
+            })
+        })
+    })
+}
 
 // FAQ Reveal Slider Script
-
-revealSlider();
-
 function revealSlider() {
     var arrows = document.querySelectorAll(".faqLi .imgHolder");
     var answers = document.querySelectorAll(".answer");
@@ -56,4 +88,72 @@ function revealSlider() {
             }
         })
     })
+}
+
+// NodeMailer
+function emailMessenger() {
+    // Hide the message div when focusing on the inputs
+    email.addEventListener("focus", function(e) {
+        if(messageDiv.style.opacity == '1') {
+            messageDiv.style.opacity = '0';
+        }
+
+        email.placeholder = " ";
+    });
+
+    username.addEventListener("focus", function(e) {
+        if(messageDiv.style.opacity == '1') {
+            messageDiv.style.opacity = '0';
+        } 
+
+        username.placeholder = " ";
+    });
+
+    // Place the placeholder back in the input if input equals blank
+    email.addEventListener("blur", function(e) {
+        if(email.value == "") {
+            email.placeholder = "John123@gmail.com";
+        }
+    });
+
+    username.addEventListener("blur", function(e) {
+        if(username.value == "") {
+            username.placeholder = "John";
+        }
+    });
+
+
+    // Form Validation
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Validate the form before sending
+        if(email.value.search(/@.+\./i) == -1 || username.value == "") {
+            form.reset();
+            return errMessage();
+        } 
+
+        // Nodemailer function
+        const mailSender = functions.httpsCallable('mailSender');
+        mailSender({username: username.value, email: email.value}).then(() => {
+            // Show message div
+            showMessage();
+            console.log("Email sent Successfully. Log to the Frontend console!");
+        }).catch(() => {
+            // Show error div
+            errMessage();
+        });
+
+        form.reset();
+    });
+}
+
+function showMessage() {
+    messageDiv.style.opacity = '1';
+};
+
+function errMessage() {
+    messageP.style.color = '#fff';
+    messageP.innerText = 'Error! Please try again.';
+    messageDiv.style.opacity = '1';
 }

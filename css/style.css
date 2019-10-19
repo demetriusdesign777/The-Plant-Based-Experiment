@@ -622,15 +622,15 @@ section.emailSec section.row div.row div.col1 p {
     text-align: center;
 }
 
-section.emailSec section.row div.row div.col2 {
+section.emailSec section.row div.row form.col2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 50px 0;
+    margin: 0 0 5px 0;
 }
 
-section.emailSec section.row div.row div.col2 input.emailBtn1,
-section.emailSec section.row div.row div.col2 input.emailBtn2 {
+section.emailSec section.row div.row form.col2 input.emailInput1,
+section.emailSec section.row div.row form.col2 input.emailInput2 {
     width: 175px;
     height: 40px;
     border: 2px solid #962465;
@@ -640,15 +640,16 @@ section.emailSec section.row div.row div.col2 input.emailBtn2 {
     margin: 0 0 0 0;
     text-align: left;
     padding: 0 0 0 10px;
+    color: #eee;
 }
 
-section.emailSec section.row div.row div.col2 ::placeholder,
-section.emailSec section.row div.row div.col2 ::placeholder {
+section.emailSec section.row div.row form.col2 ::placeholder,
+section.emailSec section.row div.row form.col2 ::placeholder {
     color: #eee;
     opacity: 0.6;
 }
 
-section.emailSec section.row div.row div.col2 button.emailBtn3 {
+section.emailSec section.row div.row form.col2 button.emailBtn3 {
     width: 175px;
     height: 40px;
     border: 2px solid #962465;
@@ -659,6 +660,16 @@ section.emailSec section.row div.row div.col2 button.emailBtn3 {
     cursor: pointer;
     border-radius: 10px;
     margin: 0 0 0 0;
+}
+
+section.emailSec section.row div.row1 div.messageDiv {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+    margin: 0 auto 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section.emailSec div.emailSecImg img {
@@ -989,20 +1000,20 @@ footer h3 {
         width: 80%;
     }
 
-    section.emailSec section.row div.row div.col2 {
+    section.emailSec section.row div.row form.col2 {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    section.emailSec section.row div.row div.col2 input.emailBtn1,
-    section.emailSec section.row div.row div.col2 input.emailBtn2 {
+    section.emailSec section.row div.row form.col2 input.emailInput1,
+    section.emailSec section.row div.row form.col2 input.emailInput2 {
         width: 225px;
         height: 40px;
         margin: 0 0 20px 0;
     }
 
-    section.emailSec section.row div.row div.col2 button.emailBtn3 {
+    section.emailSec section.row div.row form.col2 button.emailBtn3 {
         width: 239px;
     }
 
@@ -1075,13 +1086,14 @@ footer h3 {
         width: 0;
         height: 100vh;
         background: #ab2973;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         display: block;
         z-index: 1;
         transition: width 0.8s ease;
         overflow: hidden;
+        opacity: 0.95;
     }
 
     section.menuOverlay div.closeBtn {
@@ -1587,36 +1599,35 @@ footer h3 {
         text-align: center;
     }
 
-    section.emailSec section.row div.row div.col1 p {
+    section.emailSec section.row div.row form.col1 p {
         font-size: 14px;
         line-height: 2.142;
         font-weight: 400;
         text-align: center;
     }
 
-    section.emailSec section.row div.row div.col2 {
+    section.emailSec section.row div.row form.col2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0 0 0 0;
     }
 
-    section.emailSec section.row div.row div.col2 input.emailBtn1,
-    section.emailSec section.row div.row div.col2 input.emailBtn2 {
+    section.emailSec section.row div.row form.col2 input.emailInput1,
+    section.emailSec section.row div.row form.col2 input.emailInput2 {
         width: 225px;
         height: 40px;
         border: 2px solid #962465;
         background: none;
         color: #eee;
         outline: none;
-        cursor: pointer;
         border-radius: 10px;
         margin: 0 0 20px 0;
         text-align: left;
         padding: 0 0 0 10px;
     }
 
-    section.emailSec section.row div.row div.col2 button.emailBtn3 {
+    section.emailSec section.row div.row form.col2 button.emailBtn3 {
         width: 239px;
         height: 40px;
         border: 2px solid #962465;
@@ -1626,7 +1637,7 @@ footer h3 {
         font-size: 18px;
         cursor: pointer;
         border-radius: 10px;
-        margin: 0 0 30px 0;
+        margin: 0 0 5px 0;
     }
 
     section.emailSec div.emailSecImg img {
