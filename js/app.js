@@ -12,7 +12,7 @@ var messageDiv = document.querySelector('.messageDiv');
 var messageP = document.querySelector('.messageP');
 
 // Scroll Animation Variables
-var navLinks = document.querySelectorAll('.navMenuOverlayItem a');
+var navLinks = document.querySelectorAll('a');
 var html = document.querySelector('html');
 
 mobileMenu();
@@ -49,8 +49,13 @@ function scrollAnimation() {
             })
             
             promise1.then(function() {
-                // Menu Overlay
-                menu.parentElement.parentElement.previousElementSibling.style.width = "0";
+                if(a.parentElement.parentElement.parentElement.parentElement.className == "menuOverlay") {
+                    // Menu Overlay
+                    menu.parentElement.parentElement.previousElementSibling.style.width = "0";
+                } else {
+                    return null;
+                }
+                
             })
         })
     })

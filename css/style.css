@@ -11,6 +11,10 @@ html {
     position: relative;
 }
 
+a {
+    color: #000;
+}
+
 section.heroSec section.secOverlay,
 section.peopleSec section.secOverlay,
 section.learnSec section.secOverlay,
@@ -96,7 +100,7 @@ header section.row ul.nav li {
     cursor: pointer;
 }
 
-header section.row ul.nav li:hover {
+header section.row ul.nav li a:hover {
     color: #ab2973;
 }
 
@@ -866,7 +870,6 @@ footer h3 {
 
     section.mobileMenu section.row ul.mobileNav {
         display: flex;
-        color: #eee;
         font-size: 12px;
     }
 
@@ -875,7 +878,11 @@ footer h3 {
         cursor: pointer;
     }
 
-    section.mobileMenu section.row ul.mobileNav li:hover {
+    section.mobileMenu section.row ul.mobileNav a {
+        color: #eee;
+    }
+
+    section.mobileMenu section.row ul.mobileNav li a:hover {
         color: #ddd;
     }
 
@@ -1124,7 +1131,11 @@ footer h3 {
         cursor: pointer;
     }
 
-    section.menuOverlay section.row ul.navMenuOverlay li:hover {
+    section.menuOverlay section.row ul.navMenuOverlay li a {
+        color: #eee;
+    }
+
+    section.menuOverlay section.row ul.navMenuOverlay li a:hover {
         color: #ddd;
     }
 

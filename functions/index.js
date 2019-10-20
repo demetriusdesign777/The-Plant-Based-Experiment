@@ -13,10 +13,10 @@ exports.mailSender = functions.https.onCall((data, context) => {
         auth: {
             type: 'OAuth2',
             user: "",
-            clientId: "", // process.env.clientId
-            clientSecret: "", // process.env.clientSecret
-            refreshToken: "", // process.env.refreshToken
-            accessToken: "" // process.env.accessToken
+            clientId: process.env.clientId, 
+            clientSecret: process.env.clientSecret,
+            refreshToken: process.env.refreshToken,
+            accessToken: process.env.accessToken
         }
     });
         
