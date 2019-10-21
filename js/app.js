@@ -161,4 +161,4 @@ function errMessage() {
     messageP.style.color = '#fff';
     messageP.innerText = 'Error! Please try again.';
     messageDiv.style.opacity = '1';
-}
+};

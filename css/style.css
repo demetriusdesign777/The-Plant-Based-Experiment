@@ -1099,7 +1099,7 @@ footer h3 {
         display: block;
         z-index: 1;
         transition: width 0.8s ease;
-        overflow: hidden;
+        overflow: scroll;
         opacity: 0.95;
     }
 
@@ -1193,6 +1193,8 @@ footer h3 {
         font-size: 24px;
         margin: 0 0 15px 0;
         font-weight: 400;
+        width: 97.5%;
+        text-align: center;
     }
 
     section.heroSec section.row p {
@@ -1652,7 +1654,7 @@ footer h3 {
     }
 
     section.emailSec div.emailSecImg img {
-        object-position: -650px -500px;
+        object-position: -650px -450px;
     }
 
 
