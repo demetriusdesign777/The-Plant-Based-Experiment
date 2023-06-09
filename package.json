@@ -1,0 +1,20 @@
+{
+  "name": "the-plant-based-experiment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "compression": "1.7.4",
+    "ejs": "3.1.6",
+    "express": "4.17.1",
+    "google-auth-library": "8.7.0",
+    "nodemailer": "6.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "keywords": []
+}

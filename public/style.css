@@ -1,0 +1,1638 @@
+/********** UNIVERSAL **********/
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  position: relative;
+}
+
+a {
+  color: #000;
+}
+
+section.heroSec section.secOverlay,
+section.peopleSec section.secOverlay,
+section.learnSec section.secOverlay,
+section.emailSec section.secOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #2fab29;
+  opacity: 0.65;
+}
+
+section.heroSec div.imgHolder,
+section.peopleSec div.peopleSecImg,
+section.learnSec div.learnSecImg,
+section.emailSec div.emailSecImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+section.emailSec div.emailSecImg {
+  height: 100%;
+}
+
+section.heroSec div.imgHolder img,
+section.peopleSec div.peopleSecImg img,
+section.learnSec div.learnSecImg img,
+section.emailSec div.emailSecImg img {
+  object-fit: contain;
+  opacity: 0.3;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+button {
+  font-family: "Lato", sans-serif;
+}
+
+/***** 1500 width - 2000 width *****/
+
+/********** HEADER **********/
+
+header.sec {
+  width: 100%;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+}
+
+header section.row {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header section.row div.logoDiv {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 68px;
+}
+
+header section.row ul.nav {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header section.row ul.nav li {
+  font-size: 12px;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+}
+
+header section.row ul.nav li a:hover {
+  color: #ab2973;
+}
+
+header section.row ul.nav li:last-of-type {
+  margin: 0 0 0 0;
+}
+
+header section.row div.logoDiv div.imgHolder {
+  width: 40px;
+  margin: 0 10px 0 0;
+}
+
+header section.row div.logoDiv div.imgHolder img {
+  width: 100%;
+}
+
+header section.row div.logoDiv div.logoContent h2 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 5px 0;
+}
+
+header section.row div.logoDiv div.logoContent p {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/********** Mobile Menu Overlay **********/
+
+section.menuOverlay {
+  display: none;
+}
+
+/********** Mobile Menu **********/
+
+section.mobileMenu {
+  display: none;
+}
+
+/********** HERO SECTION **********/
+
+section.heroSec {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+section.heroSec section.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #eee;
+}
+
+section.heroSec section.row h1 {
+  font-size: 24px;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+
+section.heroSec section.row p {
+  width: 20%;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  line-height: 1.333;
+}
+
+section.heroSec section.row button {
+  width: 175px;
+  height: 40px;
+  border-radius: 10px;
+  color: #eee;
+  outline: none;
+  background: #ab2973;
+  border: 2px solid #962465;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/********** ASK YOURSELF SECTION **********/
+
+section.askSec {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+section.askSec section.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+
+section.askSec section.row h3 {
+  font-size: 21px;
+  font-weight: 400;
+  margin: 5px 0 30px 0;
+}
+
+section.askSec section.row p {
+  width: 100%;
+  line-height: 1.333;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+section.askSec section.row p.lastSecP {
+  margin: 0 0 20px 0;
+}
+
+section.askSec div.absoluteImg {
+  display: block;
+  position: absolute;
+  right: 278px;
+  top: 32px;
+}
+
+/********** PEOPLE SECTION **********/
+
+section.peopleSec {
+  width: 100%;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+section.peopleSec section.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 42%;
+  height: 100%;
+}
+
+section.peopleSec section.row h3 {
+  color: #eee;
+  width: 65%;
+  font-size: 21px;
+  line-height: 1.428;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px 0 30px 0;
+}
+
+section.peopleSec section.row div.peopleDiv {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+section.peopleSec section.row div.peopleDiv div.peopleDivContent {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  order: 2;
+}
+
+section.peopleSec section.row div.peopleDiv div.peopleDivContent h3 {
+  margin: 0 0 5px 0;
+  text-align: left;
+  width: 100%;
+}
+
+section.peopleSec section.row div.peopleDiv div.peopleDivContent p {
+  margin: 0 0 30px 0;
+  width: 90%;
+  line-height: 1.428;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+}
+
+section.peopleSec section.row div.peopleDiv2 div.peopleDivContent h3 {
+  margin: 0 0 5px 0;
+  text-align: right;
+  width: 100%;
+}
+
+section.peopleSec section.row div.peopleDiv2 div.peopleDivContent p {
+  margin: 0 0 5px 0;
+  text-align: right;
+  width: 100%;
+}
+
+section.peopleSec section.row div.peopleDiv div.imgHolder {
+  width: 140px;
+  height: 140px;
+  clip-path: circle(50% at 50% 50%);
+  overflow: hidden;
+  margin: 0 0 40px 0;
+  order: 2;
+}
+
+section.peopleSec section.row div.peopleDiv div.imgHolder img {
+  object-fit: contain;
+}
+
+section.peopleSec section.row div.peopleDiv div.peopleDivImg1 img {
+  object-position: -130px 0;
+}
+
+section.peopleSec section.row div.peopleDiv div.peopleDivImg2 {
+  order: 1;
+  object-position: -150px -160px;
+}
+
+section.peopleSec section.row div.peopleDiv div.peopleDivImg2 img {
+  object-position: -150px -160px;
+}
+
+section.peopleSec section.row div.peopleDiv div.peopleDivImg3 img {
+  width: 100%;
+}
+
+section.peopleSec div.peopleSecImg img {
+  object-position: 0px 0px;
+}
+
+/********** PLANT SECTION **********/
+
+section.plantSec {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+section.plantSec section.row {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.plantSec section.row div.plantSecContent1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.plantSec section.row div.plantSecContent1 h3 {
+  color: #000;
+  width: 100%;
+  font-size: 21px;
+  line-height: 1.428;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+section.plantSec section.row div.plantSecContent1 p {
+  margin: 0 0 80px 0;
+  width: 55%;
+  text-align: center;
+  color: #000;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+section.plantSec section.row div.plantSecContent2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.plantSec section.row div.plantSecContent2 div.plantDivContent {
+  width: 20%;
+  text-align: left;
+  position: relative;
+}
+
+section.plantSec section.row div.plantSecContent2 div.plantDivContent h1 {
+  font-size: 72px;
+  color: #2fab29;
+  position: absolute;
+  top: -55px;
+  left: 0;
+  opacity: 0.5;
+  text-align: left;
+  font-family: "Lato", sans-serif;
+}
+
+section.plantSec section.row div.plantSecContent2 div.plantDivContent4 {
+  margin: 0 0 60px 0;
+}
+
+section.plantSec section.row div.plantSecContent3 button {
+  width: 175px;
+  height: 40px;
+  background: #ab2973;
+  color: #eee;
+  font-size: 18px;
+  text-align: center;
+  border: 2px solid #962465;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 0 70px 0;
+}
+
+section.plantSec div.absoluteImg {
+  display: block;
+  position: absolute;
+  bottom: -116px;
+  left: -169px;
+}
+
+/********** LEARN SECTION **********/
+
+section.learnSec {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+}
+
+section.learnSec section.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+section.learnSec section.row div.row1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 41%;
+}
+
+section.learnSec section.row div.row1 h3 {
+  margin: 40px 0 20px 0;
+  font-size: 21px;
+  text-align: center;
+  font-weight: 400;
+}
+
+section.learnSec section.row div.row1 p {
+  width: 85%;
+  text-align: center;
+  margin: 0 0 40px 0;
+  font-size: 14px;
+  line-height: 1.714;
+}
+
+section.learnSec section.row div.row2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 60px 0;
+}
+
+section.learnSec section.row div.row2 div.col1 {
+  display: flex;
+}
+
+section.learnSec section.row div.row2 div.col1 ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  margin: 0 0 0 0;
+}
+
+section.learnSec section.row div.row2 div.col1 ul li {
+  line-height: 1.714;
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #eee;
+}
+
+section.learnSec section.row div.row2 div.imgHolder {
+  display: block;
+}
+
+section.learnSec div.learnSecImg img {
+  object-position: 0px -800px;
+}
+
+/********** FAQ SECTION **********/
+
+section.faqSec {
+  width: 100%;
+  height: 100%;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+section.faqSec section.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+}
+
+section.faqSec section.row div.row1 h2 {
+  margin: 40px 0 30px 0;
+  font-weight: 400;
+  font-size: 21px;
+}
+
+section.faqSec section.row div.row2 ul.faqUl {
+  margin: 0 0 60px 0;
+}
+
+section.faqSec section.row div.row2 ul.faqUl li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 15px 0;
+}
+
+section.faqSec section.row div.row2 ul.faqUl li div.quesCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+section.faqSec section.row div.row2 ul.faqUl li div.quesCont p.titleP {
+  margin: 0 20px 5px 0;
+  font-size: 18px;
+  line-height: 1.666;
+}
+
+section.faqSec section.row div.row2 ul.faqUl li div.quesCont div.imgHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 27.5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+section.faqSec section.row div.row2 ul.faqUl li p.answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  width: 30%;
+}
+
+section.faqSec div.faqSecImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+section.faqSec div.faqSecImg img {
+  opacity: 0.5;
+}
+
+/********** EMAIL SECTION **********/
+
+section.emailSec {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  color: #eee;
+}
+
+section.emailSec section.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.emailSec section.row div.row {
+  width: 40%;
+}
+
+section.emailSec section.row div.row div.col1 {
+  margin: 0 0 30px 0;
+}
+
+section.emailSec section.row div.row div.col1 h2 {
+  margin: 35px 0 20px 0;
+  font-size: 21px;
+  line-height: 1.428;
+  font-weight: 400;
+  text-align: center;
+}
+
+section.emailSec section.row div.row div.col1 p {
+  font-size: 14px;
+  line-height: 2.142;
+  font-weight: 400;
+  text-align: center;
+}
+
+section.emailSec section.row div.row form.col2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 5px 0;
+}
+
+section.emailSec section.row div.row form.col2 input.emailInput1,
+section.emailSec section.row div.row form.col2 input.emailInput2 {
+  width: 175px;
+  height: 40px;
+  border: 2px solid #962465;
+  background: none;
+  outline: none;
+  border-radius: 10px;
+  margin: 0 0 0 0;
+  text-align: left;
+  padding: 0 0 0 10px;
+  color: #eee;
+}
+
+section.emailSec section.row div.row form.col2 ::placeholder,
+section.emailSec section.row div.row form.col2 ::placeholder {
+  color: #eee;
+  opacity: 0.6;
+}
+
+section.emailSec section.row div.row form.col2 button.emailBtn3 {
+  width: 175px;
+  height: 40px;
+  border: 2px solid #962465;
+  background: #ab2973;
+  color: #eee;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 0 0 0;
+}
+
+section.emailSec section.row div.row1 div.messageDiv {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  margin: 0 auto 5px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.emailSec div.emailSecImg img {
+  object-position: 0px -500px;
+}
+
+/********** FOOTER **********/
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer h3 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/***** 1000 width - 1499 width *****/
+
+@media screen and (min-width: 1000px) and (max-width: 1499px) {
+  /********** HEADER **********/
+
+  header section.row {
+    width: 80%;
+  }
+
+  /* Changes
+  /********** Mobile Menu Overlay **********/
+
+  section.menuOverlay {
+    display: none;
+  }
+
+  /* Changes
+  /********** Mobile Menu **********/
+
+  section.mobileMenu {
+    display: none;
+  }
+
+  /********** HERO SECTION **********/
+
+  section.heroSec section.row p {
+    width: 35%;
+  }
+
+  /********** ASK YOURSELF SECTION **********/
+
+  section.askSec section.row {
+    width: 55%;
+  }
+
+  section.askSec div.absoluteImg {
+    right: -30px;
+    bottom: 193px;
+  }
+
+  /********** PEOPLE SECTION **********/
+
+  section.peopleSec section.row {
+    width: 54%;
+  }
+
+  section.peopleSec section.row div.peopleDiv2 div.peopleDivContent h3 {
+    text-align: right;
+  }
+
+  section.peopleSec section.row div.peopleDiv2 div.peopleDivContent p {
+    text-align: right;
+  }
+
+  section.peopleSec div.peopleSecImg img {
+    object-position: -400px 0px;
+  }
+
+  /********** PLANT SECTION **********/
+
+  section.plantSec section.row {
+    width: 80%;
+  }
+
+  /* Might Change color */
+  section.plantSec section.row div.plantSecContent1 h3 {
+    color: #000;
+  }
+
+  /* Might Change Color */
+  section.plantSec section.row div.plantSecContent1 p {
+    width: 70%;
+    color: #000;
+  }
+
+  section.plantSec section.row div.plantSecContent2 div.plantDivContent {
+    width: 22.5%;
+  }
+
+  section.plantSec div.absoluteImg {
+    left: -300px;
+  }
+
+  /********** LEARN SECTION **********/
+
+  section.learnSec section.row {
+    width: 81%;
+  }
+
+  section.learnSec section.row div.row1 {
+    width: 45%;
+  }
+
+  section.learnSec div.learnSecImg img {
+    object-position: -200px -800px;
+  }
+
+  /********** FAQ SECTION **********/
+
+  section.faqSec section.row div.row2 ul.faqUl li p.answer {
+    width: 50%;
+  }
+
+  /********** EMAIL SECTION **********/
+
+  section.emailSec section.row div.row {
+    width: 65%;
+  }
+
+  /********** FOOTER **********/
+
+  /* No Changes */
+}
+
+/***** 1300 width - 1499 width *****/
+
+@media screen and (min-width: 1250px) and (max-width: 1499px) {
+  section.emailSec section.row div.row {
+    width: 50%;
+  }
+}
+
+/***** 600 width - 999 width *****/
+
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  /********** HEADER **********/
+
+  header section.row div.logoDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header section.row ul.nav {
+    display: none;
+  }
+
+  /********** Mobile Menu **********/
+
+  section.mobileMenu {
+    width: 100%;
+    height: 40px;
+    background: #ab2973;
+    display: flex;
+  }
+
+  section.mobileMenu section.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  section.mobileMenu section.row ul.mobileNav {
+    display: flex;
+    font-size: 12px;
+  }
+
+  section.mobileMenu section.row ul.mobileNav li {
+    margin: 0 15px 0 0;
+    cursor: pointer;
+  }
+
+  section.mobileMenu section.row ul.mobileNav a {
+    color: #eee;
+  }
+
+  section.mobileMenu section.row ul.mobileNav li a:hover {
+    color: #ddd;
+  }
+
+  section.mobileMenu section.row div.imgHolder {
+    display: none;
+  }
+
+  /********** HERO SECTION **********/
+
+  section.heroSec section.row p {
+    width: 65%;
+  }
+
+  section.heroSec section.row button {
+    width: 225px;
+  }
+
+  /********** ASK YOURSELF SECTION **********/
+
+  section.askSec section.row {
+    width: 85%;
+  }
+
+  section.askSec div.absoluteImg {
+    display: none;
+  }
+
+  /********** PEOPLE SECTION **********/
+
+  section.peopleSec section.row {
+    width: 85%;
+  }
+
+  section.peopleSec div.peopleSecImg img {
+    object-position: -600px 0px;
+  }
+
+  /********** PLANT SECTION **********/
+
+  section.plantSec section.row {
+    width: 75%;
+  }
+
+  section.plantSec section.row div.plantSecContent1 p {
+    width: 100%;
+  }
+
+  section.plantSec section.row div.plantSecContent2 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  section.plantSec section.row div.plantSecContent2 div.plantDivContent {
+    width: 45%;
+    margin: 0 0 90px 0;
+  }
+
+  section.plantSec section.row div.plantSecContent3 button {
+    width: 225px;
+  }
+
+  section.plantSec div.absoluteImg {
+    display: none;
+  }
+
+  /********** LEARN SECTION **********/
+
+  section.learnSec section.row {
+    width: 80%;
+  }
+
+  section.learnSec section.row div.row1 {
+    width: 60%;
+  }
+
+  section.learnSec section.row div.row1 p {
+    width: 100%;
+  }
+
+  section.learnSec section.row div.row2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  section.learnSec section.row div.row2 div.col1 ul {
+    align-items: center;
+    text-align: center;
+  }
+
+  section.learnSec section.row div.row2 div.imgHolder {
+    display: none;
+  }
+
+  section.learnSec div.learnSecImg img {
+    object-position: -100px -800px;
+  }
+
+  /********** FAQ SECTION **********/
+
+  section.faqSec section.row div.row2 ul.faqUl li p.answer {
+    width: 80%;
+  }
+
+  /********** EMAIL SECTION **********/
+
+  section.emailSec section.row div.row {
+    width: 80%;
+  }
+
+  section.emailSec section.row div.row div.col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.emailSec section.row div.row div.col1 p {
+    width: 80%;
+  }
+
+  section.emailSec section.row div.row form.col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.emailSec section.row div.row form.col2 input.emailInput1,
+  section.emailSec section.row div.row form.col2 input.emailInput2 {
+    width: 225px;
+    height: 40px;
+    margin: 0 0 20px 0;
+  }
+
+  section.emailSec section.row div.row form.col2 button.emailBtn3 {
+    width: 239px;
+  }
+
+  section.emailSec div.emailSecImg img {
+    object-position: -600px -500px;
+  }
+}
+
+/***** 320 width - 600 width *****/
+
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  /********** HEADER **********/
+
+  header {
+    width: 100%;
+    height: 68px;
+  }
+
+  header section.row {
+    height: 100%;
+    width: 100%;
+  }
+
+  header section.row div.logoDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 68px;
+  }
+
+  header section.row ul.nav {
+    display: none;
+  }
+
+  header section.row div.logoDiv div.imgHolder {
+    width: 40px;
+    margin: 0 10px 0 0;
+  }
+
+  header section.row div.logoDiv div.imgHolder img {
+    width: 100%;
+  }
+
+  header section.row div.logoDiv div.logoContent h2 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+  }
+
+  header section.row div.logoDiv div.logoContent p {
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  /***** Header Nav *****/
+
+  header ul.nav {
+    display: none;
+  }
+
+  /********** Mobile Menu Overlay **********/
+
+  section.menuOverlay {
+    width: 0;
+    height: 100vh;
+    background: #ab2973;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+    transition: width 0.8s ease;
+    overflow: scroll;
+    opacity: 0.95;
+  }
+
+  section.menuOverlay div.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 24px;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  section.menuOverlay section.row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.menuOverlay section.row ul.navMenuOverlay {
+    color: #eee;
+    height: 50%;
+    font-size: 24px;
+  }
+
+  section.menuOverlay section.row ul.navMenuOverlay li {
+    margin: 0 0 30px 0;
+    cursor: pointer;
+  }
+
+  section.menuOverlay section.row ul.navMenuOverlay li a {
+    color: #eee;
+  }
+
+  section.menuOverlay section.row ul.navMenuOverlay li a:hover {
+    color: #ddd;
+  }
+
+  /********** Mobile Menu **********/
+
+  section.mobileMenu {
+    width: 100%;
+    height: 40px;
+    background: #ab2973;
+    display: flex;
+  }
+
+  section.mobileMenu section.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  section.mobileMenu section.row ul.mobileNav {
+    display: none;
+  }
+
+  section.mobileMenu section.row div.imgHolder {
+    width: 24px;
+    cursor: pointer;
+  }
+
+  section.mobileMenu section.row div.imgHolder img {
+    width: 100%;
+  }
+
+  /********** HERO SECTION **********/
+
+  section.heroSec {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.heroSec section.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #eee;
+  }
+
+  section.heroSec section.row h1 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    width: 97.5%;
+    text-align: center;
+  }
+
+  section.heroSec section.row p {
+    width: 90%;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    line-height: 1.333;
+  }
+
+  section.heroSec section.row button {
+    width: 225px;
+    height: 40px;
+    border-radius: 10px;
+    color: #eee;
+    outline: none;
+    background: #ab2973;
+    border: 2px solid #962465;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  /********** ASK YOURSELF SECTION **********/
+
+  section.askSec {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.askSec section.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  section.askSec section.row h3 {
+    font-size: 21px;
+    font-weight: 400;
+    margin: 40px 0 30px 0;
+  }
+
+  section.askSec section.row p {
+    width: 100%;
+    line-height: 1.714;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 0 15px 0;
+  }
+
+  section.askSec section.row p.lastSecP {
+    margin: 0 0 40px 0;
+  }
+
+  section.askSec div.absoluteImg {
+    display: none;
+  }
+
+  /********** PEOPLE SECTION **********/
+
+  section.peopleSec {
+    width: 100%;
+    height: 1068px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.peopleSec section.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  section.peopleSec section.row h3 {
+    color: #eee;
+    width: 90%;
+    font-size: 21px;
+    line-height: 1.428;
+    font-weight: 400;
+    text-align: center;
+    margin: 40px 0 30px 0;
+  }
+
+  section.peopleSec section.row div.peopleDiv {
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  section.peopleSec section.row div.peopleDiv div.peopleDivContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+    width: 90%;
+  }
+
+  section.peopleSec section.row div.peopleDiv div.peopleDivContent h3 {
+    margin: 0 0 5px 0;
+    text-align: center;
+  }
+
+  section.peopleSec section.row div.peopleDiv div.peopleDivContent p {
+    margin: 0 0 30px 0;
+    width: 90%;
+    line-height: 1.428;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  section.peopleSec section.row div.peopleDiv div.imgHolder {
+    width: 140px;
+    height: 140px;
+    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+    order: 1;
+    margin: 0 0 20px 0;
+  }
+
+  section.peopleSec section.row div.peopleDiv div.imgHolder img {
+    object-fit: contain;
+  }
+
+  section.peopleSec section.row div.peopleDiv div.peopleDivImg1 img {
+    object-position: -130px 0;
+  }
+
+  section.peopleSec section.row div.peopleDiv div.peopleDivImg2 img {
+    object-position: -150px -160px;
+  }
+
+  section.peopleSec section.row div.peopleDiv div.peopleDivImg3 img {
+    width: 100%;
+  }
+
+  section.peopleSec div.peopleSecImg img {
+    object-position: -800px 0px;
+  }
+
+  /********** PLANT SECTION **********/
+
+  section.plantSec {
+    width: 100%;
+    background: #fff;
+  }
+
+  section.plantSec section.row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.plantSec section.row div.plantSecContent1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.plantSec section.row div.plantSecContent1 h3 {
+    color: #000;
+    width: 100%;
+    font-size: 21px;
+    line-height: 1.428;
+    font-weight: 400;
+    text-align: center;
+    margin: 40px 0 20px 0;
+  }
+
+  section.plantSec section.row div.plantSecContent1 p {
+    margin: 0 0 60px 0;
+    width: 85%;
+    text-align: center;
+    color: #000;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  section.plantSec section.row div.plantSecContent2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.plantSec section.row div.plantSecContent2 div.plantDivContent {
+    margin: 0 0 60px 0;
+    width: 80%;
+    text-align: center;
+    position: relative;
+  }
+
+  section.plantSec section.row div.plantSecContent2 div.plantDivContent h1 {
+    font-size: 72px;
+    color: #2fab29;
+    position: absolute;
+    top: -55px;
+    left: 41%;
+    opacity: 0.5;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+  }
+
+  section.plantSec section.row div.plantSecContent2 div.plantDivContent4 {
+    margin: 0 0 40px 0;
+  }
+
+  section.plantSec section.row div.plantSecContent3 button {
+    width: 225px;
+    height: 40px;
+    background: #ab2973;
+    color: #eee;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #962465;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 0 40px 0;
+  }
+
+  section.plantSec div.absoluteImg {
+    display: none;
+  }
+
+  /********** LEARN SECTION **********/
+
+  section.learnSec {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    color: #eee;
+  }
+
+  section.learnSec section.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  section.learnSec section.row div.row1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  section.learnSec section.row div.row1 h3 {
+    margin: 40px 0 20px 0;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  section.learnSec section.row div.row1 p {
+    width: 90%;
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-size: 14px;
+    line-height: 1.714;
+  }
+
+  section.learnSec section.row div.row2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  section.learnSec section.row div.row2 div.col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.learnSec section.row div.row2 div.col1 ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 40px 0;
+  }
+
+  section.learnSec section.row div.row2 div.col1 ul li {
+    line-height: 1.714;
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #eee;
+  }
+
+  section.learnSec section.row div.row2 div.imgHolder {
+    display: none;
+  }
+
+  section.learnSec div.learnSecImg img {
+    object-position: -760px -600px;
+  }
+
+  /********** FAQ SECTION **********/
+
+  section.faqSec {
+    width: 100%;
+    height: 100%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  section.faqSec section.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    text-align: center;
+  }
+
+  section.faqSec section.row div.row1 h2 {
+    margin: 40px 0 30px 0;
+    font-weight: 400;
+    font-size: 21px;
+  }
+
+  section.faqSec section.row div.row2 ul.faqUl {
+    margin: 0 0 60px 0;
+  }
+
+  section.faqSec section.row div.row2 ul.faqUl li {
+    margin: 0 0 15px 0;
+  }
+
+  section.faqSec section.row div.row2 ul.faqUl li div.quesCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  section.faqSec section.row div.row2 ul.faqUl li div.quesCont p.titleP {
+    margin: 0 20px 5px 0;
+    font-size: 18px;
+    line-height: 1.666;
+  }
+
+  section.faqSec section.row div.row2 ul.faqUl li div.quesCont div.imgHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 27.5px;
+  }
+
+  section.faqSec section.row div.row2 ul.faqUl li p.answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    width: 100%;
+  }
+
+  section.faqSec div.faqSecImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  section.faqSec div.faqSecImg img {
+    opacity: 0.5;
+  }
+
+  /********** EMAIL SECTION **********/
+
+  section.emailSec {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    color: #eee;
+  }
+
+  section.emailSec section.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.emailSec section.row div.row {
+    width: 85%;
+  }
+
+  section.emailSec section.row div.row div.col1 {
+    margin: 0 0 30px 0;
+  }
+
+  section.emailSec section.row div.row div.col1 h2 {
+    margin: 35px 0 20px 0;
+    font-size: 21px;
+    line-height: 1.428;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  section.emailSec section.row div.row form.col1 p {
+    font-size: 14px;
+    line-height: 2.142;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  section.emailSec section.row div.row form.col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 0 0;
+  }
+
+  section.emailSec section.row div.row form.col2 input.emailInput1,
+  section.emailSec section.row div.row form.col2 input.emailInput2 {
+    width: 225px;
+    height: 40px;
+    border: 2px solid #962465;
+    background: none;
+    color: #eee;
+    outline: none;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+    text-align: left;
+    padding: 0 0 0 10px;
+  }
+
+  section.emailSec section.row div.row form.col2 button.emailBtn3 {
+    width: 239px;
+    height: 40px;
+    border: 2px solid #962465;
+    background: #ab2973;
+    color: #eee;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 0 5px 0;
+  }
+
+  section.emailSec div.emailSecImg img {
+    object-position: -650px -450px;
+  }
+
+  /********** FOOTER **********/
+
+  footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  footer h3 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,6 @@
+An express template containing ejs, compression, express url parser,
+nodemailer with nodemailer form webplayground account.
+
+The form is pretty basic, it's located on the index page. The 
+location of the email form & the email account would have to be 
+changed if not coming from my account. There's no form validation.
